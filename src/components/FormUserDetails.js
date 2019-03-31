@@ -3,6 +3,8 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
+import RadioButtonGroup from "material-ui/RadioButton/RadioButtonGroup";
+import RadioButton from "material-ui/RadioButton";
 
 class FormUserDetails extends Component {
   continue = e => {
@@ -17,6 +19,22 @@ class FormUserDetails extends Component {
       <MuiThemeProvider>
         <React.Fragment>
           <AppBar title="Enter User Details" />
+          <h4>What kind of possible case do you have?</h4>
+          <RadioButtonGroup name="possibleCase" defaultSelected="car_accident">
+            <RadioButton value="slip_and_fall" label="Slip and Fall" />
+            <RadioButton
+              value="car_accident"
+              label="Car Accident/ Trucking Accident/ Motorcycle Accident"
+            />
+            <RadioButton
+              value="medical_malpractice"
+              label="Medical Malpractice"
+            />
+            <RadioButton
+              value="attack_or_bite_by_animal"
+              label="Attack or Bite by Animal"
+            />
+          </RadioButtonGroup>
           <TextField
             hintText="Enter Your First Name"
             floatingLabelText="First Name"

@@ -7,12 +7,23 @@ import Success from "./Success";
 class UserForm extends Component {
   state = {
     step: 1,
-    firstName: "",
-    lastName: "",
-    email: "",
-    occupation: "",
-    city: "",
-    bio: ""
+    score: 0,
+    possibleCase: 0,
+    injuries: 0,
+    propertyDamage: 0,
+    workMissed: 0,
+    moneyLoss: 0,
+    hurtNegligence: 0,
+    medicalBills: 0,
+    payFor: 0,
+    slipAndFall: 0,
+    defectiveProduct: 0,
+    damages: 0,
+    medicalCare: 0,
+    animalAttack: 0,
+    familyCareCosts: 0,
+    childCareCosts: 0,
+    lawBroke: 0
   };
 
   nextStep = () => {
@@ -37,8 +48,44 @@ class UserForm extends Component {
 
   render() {
     const { step } = this.state;
-    const { firstName, lastName, email, occupation, city, bio } = this.state;
-    const values = { firstName, lastName, email, occupation, city, bio };
+    const {
+      possibleCase,
+      injuries,
+      propertyDamage,
+      hurtNegligence,
+      moneyLoss,
+      workMissed,
+      medicalBills,
+      payFor,
+      slipAndFall,
+      defectiveProduct,
+      damages,
+      medicalCare,
+      animalAttack,
+      familyCareCosts,
+      childCareCosts,
+      lawBroke,
+      score
+    } = this.state;
+    const values = {
+      possibleCase,
+      injuries,
+      propertyDamage,
+      hurtNegligence,
+      moneyLoss,
+      workMissed,
+      medicalBills,
+      payFor,
+      slipAndFall,
+      defectiveProduct,
+      damages,
+      medicalCare,
+      animalAttack,
+      familyCareCosts,
+      childCareCosts,
+      lawBroke,
+      score
+    };
 
     switch (step) {
       case 1:

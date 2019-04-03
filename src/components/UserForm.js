@@ -93,6 +93,8 @@ class UserForm extends Component {
           <FormUserDetails
             nextStep={this.nextStep}
             handleChange={this.handleChange}
+            addScore={this.addScore}
+            subtractScore={this.subtractScore}
             values={values}
           />
         );

@@ -10,12 +10,21 @@ class FormUserDetails extends Component {
     this.props.nextStep();
   };
 
+  // addScore = () => {
+  //   const { score } = this.state;
+  //   this.setState({
+  //     score: values.injuries.value + values.medicalBills.value + values.payFor
+  //   });
+  //   console.log(score);
+  // };
+
   state = {};
   render() {
     const { values, handleChange } = this.props;
     return (
       <MuiThemeProvider>
         <React.Fragment>
+          <h2>Important Questions</h2>
           <h4>What kind of possible case do you have?</h4>
           <RadioButtonGroup
             name="possibleCase"
@@ -66,7 +75,7 @@ class FormUserDetails extends Component {
             defaultSelected={values.payFor}
             onChange={handleChange("payFor")}
           >
-            <RadioButton value="1" label="Yes" />
+            <RadioButton onc value="1" label="Yes" />
             <RadioButton value="0" label="No" />
           </RadioButtonGroup>
 
